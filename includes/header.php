@@ -6,6 +6,33 @@ if(!isset($_SESSION) || empty($_SESSION)){
     @header('Location:login');
     exit();
 }
+
+$page = explode('/',$_SERVER['REQUEST_URI']);
+$active = false;
+switch ($page[1]) {
+	case 'message':
+		$active = 'active';
+		break;
+	case 'learner':
+		$active = 'active';
+		break;
+	case 'trainor':
+		$active = 'active';
+		break;
+	case 'qualification':
+		$active = 'active';
+		break;
+	case 'my_profile':
+		$active = 'active';
+		break;
+	case 'changePassword':
+		$active = 'active';
+		break;
+	
+	default:
+		$active = 'active';
+		break;
+}
 ?>
 
 
@@ -102,46 +129,46 @@ if(!isset($_SESSION) || empty($_SESSION)){
 				<!-- Sidebar Menu-->
 				<ul class="sidebar-menu">
 					<li class="nav-level"><i class="icon-list"></i><span>&nbsp;Navigation</span></li>
-					<li class="active treeview">
+					<li class="treeview  <?php echo ($_SERVER['REQUEST_URI'] == '/dashboard') ?  "active": ""; ?>">
 						<a class="waves-effect waves-dark" href="dashboard">
 							<i class="icon-speedometer"></i><span> Dashboard</span>
 						</a>                
 					</li>
-					<li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-book-open"></i><span>Qualification</span><i class="icon-arrow-down"></i></a>
+					<li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/qualification') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#!"><i class="icon-book-open"></i><span>Qualification</span><i class="icon-arrow-down"></i></a>
 						<ul class="treeview-menu">
 							<li><a class="waves-effect waves-dark" href="qualification"><i class="icon-arrow-right ql"></i>Qualification List</a></li>
 						</ul>
 					</li>
-					 <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-calendar"></i><span>Schedule</span><i class="icon-arrow-down"></i></a>
+					 <li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/schedule') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#!"><i class="icon-calendar"></i><span>Schedule</span><i class="icon-arrow-down"></i></a>
 						<ul class="treeview-menu">
 							<li><a class="waves-effect waves-dark" href="schedule"><i class="icon-arrow-right sl"></i>Schedule List</a></li>
 							<li><a class="waves-effect waves-dark" href="form-elements-bootstrap.html"><i class="icon-arrow-right ss"></i>Set Schedule</a></li>
 						</ul>
 					</li>
-					<li class="treeview"><a class="waves-effect waves-dark" href="#"><i class="icofont-group-students"></i><span> Learner</span><i class="icon-arrow-down"></i></a>
+					<li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/learner') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#"><i class="icofont-group-students"></i><span> Learner</span><i class="icon-arrow-down"></i></a>
 						<ul class="treeview-menu">
 							 <li><a class="waves-effect waves-dark " href="learner"><i class="icon-arrow-right ll"></i>Learner List</a></li>
 							<li><a class="waves-effect waves-dark" href="#l"><i class="icon-arrow-right il"></i>Inactive Learner</a></li>
 						</ul>
 					</li>
-					<li class="treeview"><a class="waves-effect waves-dark" href="#"><i class="icofont-teacher"></i><span> Trainor</span><i class="icon-arrow-down"></i></a>
+					<li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/trainor') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#"><i class="icofont-teacher"></i><span> Trainor</span><i class="icon-arrow-down"></i></a>
 						<ul class="treeview-menu">
 
 							 <li><a class="waves-effect waves-dark " href="trainor"><i class="icon-arrow-right tl"></i>Trainor List</a></li>
 							<li><a class="waves-effect waves-dark" href="#l"><i class="icon-arrow-right it"></i>Inactive Trainor</a></li>
 						</ul>
 					</li>
-					 <li class="treeview">
+					 <li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/message') ? "active" : ""; ?>">
 						<a class="waves-effect waves-dark" href="message">
 							<i class="icon-envelope-open"></i><span> Message</span>
 						</a>
 					</li>
-					<li class="treeview">
+					<li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/reports') ? "active" : ""; ?>">
 						<a class="waves-effect waves-dark" href="reports">
 							<i class="icon-chart"></i><span>Graph Reports</span>
 						</a>                
 					</li>
-					<li class="treeview"><a class="waves-effect waves-dark" href="#"><i class="icon-settings"></i><span> Settings</span><i class="icon-arrow-down"></i></a>
+					<li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/settings') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#"><i class="icon-settings"></i><span> Settings</span><i class="icon-arrow-down"></i></a>
 						<ul class="treeview-menu">
 
 							<li class="treeview">
@@ -156,7 +183,7 @@ if(!isset($_SESSION) || empty($_SESSION)){
 							</li>
 						</ul>
 					</li>
-					 <li class="treeview">
+					 <li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/message') ? : ""; ?>">
 						<a class="waves-effect waves-dark" href="logout?logout=true">
 							<i class="icon-logout"></i><span> Logout</span>
 						</a>
