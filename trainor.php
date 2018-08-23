@@ -13,62 +13,46 @@
 				<div class="card">
 					<div class="card-header">
 						<h5 class="card-header-text">Trainor List</h5>
-						<span class="m-t-10 text-capitalize d-block">active trainor</span>
+						<span class="m-t-10 text-capitalize d-block text-info">active trainor</span><br>
+						<button type="button" class="btn btn-inverse-primary waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add New Trainor" onclick="redirect('addTrainor')">
+                                    <i class="icofont icofont-plus"></i><span class="m-l-10">Add New</span>
+                                </button>
 					</div>
 					<div class="card-block">
 						<div class="table-responsive">
 							<table class="table m-b-0" id="example">
 								<thead>
-									<tr class="text-uppercase">
+									<tr>
 										<th class="p-t-0">ID</th>
-										<th class="p-t-0">Item Name</th>
-										<th class="p-t-0">Price</th>
+										<th class="p-t-0">Name</th>
+										<th class="p-t-0">Status</th>
+										<th class="p-t-0">Operation</th>
+										<th class="p-t-0">Date Created</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>1001</td>
-										<td>Dell Inspiron 3555 Laptop</td>
-										<td><a href="#">$600</a>
-										</td>
-
-									</tr>
-									<tr>
-										<td>2581</td>
-										<td>HP 15-Ay008tx Laptop</td>
-										<td><a href="#">$857</a>
-										</td>
-									</tr>
-									<tr>
-										<td>8596</td>
-										<td>HP Pavilion 13-S102TU X360 </td>
-										<td><a href="#">$860</a>
-										</td>
-									</tr>
-									<tr>
-										<td>1256</td>
-										<td>Dell Inspiron 3555 Laptop</td>
-										<td><a href="#">$600</a>
-										</td>
-									</tr>
-									<tr>
-										<td>1258</td>
-										<td>HP Pavilion Notebook</td>
-										<td><a href="#">$700</a>
-										</td>
+										
 									</tr>
 								</tbody>
 							</table>
 						</div>
+
 					</div>
 				</div>
 			</div>
+		
 		</div>
-	</div>
+
+		</div>
+<!-- 2-1 block end -->
 </div>
 <?php include('includes/footer.php') ?>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript">
     $('#example').DataTable();
+    function redirect($url){
+    	window.location.href = $url;
+    }
 </script>
