@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="main-header">
-				<h4>Add New Learner</h4>
+				<h4>New Password</h4>
 			</div>
 		</div>
 		<div class="row">

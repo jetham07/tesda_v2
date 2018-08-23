@@ -13,7 +13,7 @@
 				<div class="card">
 					<div class="card-header">
 						<h5 class="card-header-text">Messages</h5>
-						<span class="m-t-10 text-capitalize d-block">Sent Messages </span>
+						<span class="m-t-10 text-capitalize d-block text-danger">Sent Messages </span>
 					</div>
 					<div class="card-block">
 						<div class="table-responsive">
