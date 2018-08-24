@@ -142,7 +142,7 @@ switch ($page[1]) {
 					 <li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/schedule') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#!"><i class="icon-calendar"></i><span>Schedule</span><i class="icon-arrow-down"></i></a>
 						<ul class="treeview-menu">
 							<li><a class="waves-effect waves-dark" href="schedule"><i class="icon-arrow-right sl"></i>Schedule List</a></li>
-							<li><a class="waves-effect waves-dark" href="form-elements-bootstrap.html"><i class="icon-arrow-right ss"></i>Set Schedule</a></li>
+							<li><a class="waves-effect waves-dark" href="addSchedule"><i class="icon-arrow-right ss"></i>Set Schedule</a></li>
 						</ul>
 					</li>
 					<li class="treeview <?php echo ($_SERVER['REQUEST_URI'] == '/learner') ? "active" : ""; ?>"><a class="waves-effect waves-dark" href="#"><i class="icofont-group-students"></i><span> Learner</span><i class="icon-arrow-down"></i></a>
